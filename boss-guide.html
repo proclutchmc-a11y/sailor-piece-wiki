@@ -1,0 +1,826 @@
+<div class="brand-header" style="text-align:center; padding: 40px 20px; background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif;">
+    
+    <h1 style="color: #ff9800; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">
+        <span style="font-size: 0.8em;">⚓</span> SAILOR PIECE ULTIMATE HUB
+    </h1>
+
+    <div style="margin-bottom: 20px;">
+        <span style="background: #ff0000; color: #fff; padding: 4px 10px; border-radius: 3px; font-size: 0.7rem; font-weight: bold; vertical-align: middle; margin-right: 10px; animation: pulse 1.5s infinite;">
+            NEW BOSS
+        </span>
+        <span style="color: #00d4ff; font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
+            ❄️ Ice Queen Drops Added!
+        </span>
+    </div>
+    
+    <div style="margin: 15px 0;">
+        <span style="color: #ff9800; font-weight: bold; border: 1px solid #ff9800; padding: 5px 15px; border-radius: 3px; font-size: 0.8rem;">
+            UPDATED: APRIL 9, 2026
+        </span>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <input type="text" id="search" placeholder="Search for Ice Queen, Moon Slayer..." onkeyup="filterData()" 
+               style="width: 85%; max-width: 600px; padding: 15px; background: #0a0a0a; border: 2px solid #333; border-radius: 8px; color: white; outline: none;">
+    </div>
+</div>
+
+<style>
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+</style>
+<div class="container">
+<div class="card">
+    <div class="name">Thief (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">7.25%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">2.1%</span></div>
+    <div class="drop-row"><span>Artifact: Ashen Chronicles</span><span class="rate">0.87%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">0.58%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.3132%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.2349%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.1%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.0812%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.08%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.0801%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0348%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.0348%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.0755%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.07%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Common Chest</span><span class="rate">1.16%</span></div>
+        <div class="drop-row"><span>Rare Chest</span><span class="rate">0.522%</span></div>
+        <div class="drop-row"><span>Epic Chest</span><span class="rate">0.2668%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.0696%</span></div>
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.0348%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.000696%</span></div>
+        <div class="drop-row"><span>Cosmetic Crate</span><span class="rate">0.000407%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Monkey (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">9.425%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">2.9%</span></div>
+    <div class="drop-row"><span>Artifact: Ashen Chronicles</span><span class="rate">1.015%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">0.725%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.3915%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.2936%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.125%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.0974%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.095%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.1001%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0435%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.0435%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.0944%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.08%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Common Chest</span><span class="rate">1.45%</span></div>
+        <div class="drop-row"><span>Rare Chest</span><span class="rate">0.6525%</span></div>
+        <div class="drop-row"><span>Epic Chest</span><span class="rate">0.3335%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.087%</span></div>
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.0435%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.00087%</span></div>
+        <div class="drop-row"><span>Cosmetic Crate</span><span class="rate">0.000509%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Desert Bandit (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">10.875%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">3.625%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">1.8125%</span></div>
+    <div class="drop-row"><span>Artifact: Crownless Regalia</span><span class="rate">0.6815%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">0.87%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">0.87%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.4894%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.3915%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">0.335%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.15%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.1241%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.1251%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0485%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.058%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.095%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.0944%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.08%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Common Chest</span><span class="rate">1.8125%</span></div>
+        <div class="drop-row"><span>Rare Chest</span><span class="rate">0.754%</span></div>
+        <div class="drop-row"><span>Epic Chest</span><span class="rate">0.435%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.1305%</span></div>
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.058%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.00087%</span></div>
+        <div class="drop-row"><span>Cosmetic Crate</span><span class="rate">0.000609%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Frost Rogue (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">14.5%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">4.7125%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">2.5375%</span></div>
+    <div class="drop-row"><span>Artifact: Crownless Regalia</span><span class="rate">0.8265%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">1.16%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.2325%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.646%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.5481%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">0.45%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.1813%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.2918%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0575%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.1444%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.12%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.0725%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001015%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Sorcerer Student (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">18.125%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">5.8%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">2.9%</span></div>
+    <div class="drop-row"><span>Artifact: Black Horizon</span><span class="rate">0.58%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.45%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.9788%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.8417%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.5419%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0675%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.2175%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.2444%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.14%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.0943%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001088%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Hollow (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">21.75%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">6.525%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.2625%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.09%</span></div>
+    <div class="drop-row"><span>Transmutation Shard</span><span class="rate">0.01%</span></div>
+    <div class="drop-row"><span>Artifact: Black Horizon</span><span class="rate">0.7685%</span></div>
+    <div class="drop-row"><span>Worthiness Fragment</span><span class="rate">1.2325%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.1745%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.9396%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.667%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0775%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.2683%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.2644%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.17%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.1088%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001233%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Strong Sorcerer (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">25.375%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7.25%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.625%</span></div>
+    <div class="drop-row"><span>Limitless Key</span><span class="rate">0.87%</span></div>
+    <div class="drop-row"><span>Energy Shard</span><span class="rate">1.16%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.986%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.247%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.8125%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">2.1025%</span></div>
+    <div class="drop-row"><span>Artifact: Celestial Rupture</span><span class="rate">0.435%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.725%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0775%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.29%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.105%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.2844%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.19%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.116%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001378%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Slime (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">5.65%</span></div>
+    <div class="drop-row"><span>Slime Shard</span><span class="rate">0.915%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">0.95%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.975%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.82%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.55%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.6%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0945%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.365%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.24%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.3641%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.215%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.095%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001135%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Curse (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">26.825%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7.7575%</span></div>
+    <div class="drop-row"><span>Malevolent Key</span><span class="rate">0.87%</span></div>
+    <div class="drop-row"><span>Cursed Talisman</span><span class="rate">1.16%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.1125%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.305%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">1.0585%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">2.2475%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.7975%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0785%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.3%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.3118%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.3141%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.195%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.1269%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001523%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Quincy (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">23.5%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.65%</span></div>
+    <div class="drop-row"><span>Chrysalis Sigil</span><span class="rate">0.36%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.155%</span></div>
+    <div class="drop-row"><span>Artifact: Celestial Rupture</span><span class="rate">0.525%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.225%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">1.085%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.7%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1184%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.44%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.4484%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.29%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.11%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.002%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Academy Teacher (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">22.5%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">6.65%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.25%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.1325%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.05%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.9%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">1.65%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.6%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1054%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.38%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.4041%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.25%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.095%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.001135%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Swordsman (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">23%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">6.85%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.45%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">1.05%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.145%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.15%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.95%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.65%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1124%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.42%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.4364%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.275%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.1%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.00145%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Ninja (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7.5%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.75%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">2.05%</span></div>
+    <div class="drop-row"><span>Artifact: Abyssal Crown</span><span class="rate">0.45%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.165%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.275%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.114%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.75%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1244%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.46%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.4544%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.31%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.12%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.00215%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Arena Fighter (1–5)</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7.75%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.9%</span></div>
+    <div class="drop-row"><span>Abyss Sigil</span><span class="rate">0.3%</span></div>
+    <div class="drop-row"><span>Artifact: Abyssal Crown</span><span class="rate">0.485%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.175%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.3%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.118%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.8%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1294%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.48%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.4604%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.325%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.127%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.00225%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Thief Boss [World Boss]</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">10.875%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">1.2325%</span></div>
+    <div class="drop-row"><span>Artifact: Ashen Chronicles</span><span class="rate">1.0875%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">0.783%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.5873%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.15%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.1167%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.1141%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.095%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.0471%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0435%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.09%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.1044%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.058%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.1885%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Monkey Boss [World Boss]</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">14.5%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">1.9575%</span></div>
+    <div class="drop-row"><span>Artifact: Ashen Chronicles</span><span class="rate">1.2325%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.0766%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">0.783%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.185%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.1541%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.1417%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.135%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.0653%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0492%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.1344%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.11%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.0725%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.261%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Desert Boss [World Boss]</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">18.125%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">5.8%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">2.9%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">2.5375%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.566%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.305%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">1.0766%</span></div>
+    <div class="drop-row"><span>Artifact: Crownless Regalia</span><span class="rate">0.9425%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.225%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.1841%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.1668%</span></div>
+    <div class="drop-row"><span>Tempest Relic</span><span class="rate">0.155%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.087%</span></div>
+    <div class="drop-row"><span>Rush Key</span><span class="rate">0.0555%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.1644%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.135%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.087%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.3333%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Snow Boss [World Boss]</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">21.75%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">7.25%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">3.625%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">2.9%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">1.8125%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">1.566%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">1.3703%</span></div>
+    <div class="drop-row"><span>Artifact: Crownless Regalia</span><span class="rate">1.0875%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">0.7504%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">0.55%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.2683%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.25%</span></div>
+    <div class="drop-row"><span>Clan Reroll</span><span class="rate">0.2241%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.1088%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.0655%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.1844%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.14%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.116%</span></div>
+        <div class="drop-row"><span>Legendary Chest</span><span class="rate">0.348%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Panda Mini Boss [World Boss]</div>
+    <div class="drop-row"><span>Wood</span><span class="rate">29%</span></div>
+    <div class="drop-row"><span>Iron</span><span class="rate">8.7%</span></div>
+    <div class="drop-row"><span>Obsidian</span><span class="rate">4.35%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">3.8425%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">2.6426%</span></div>
+    <div class="drop-row"><span>Mythril</span><span class="rate">2.5375%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">2.1533%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">1.2506%</span></div>
+    <div class="drop-row"><span>Artifact: Black Horizon</span><span class="rate">0.9425%</span></div>
+    <div class="drop-row"><span>Adamantite</span><span class="rate">0.3263%</span></div>
+    <div class="drop-row"><span>Diamond</span><span class="rate">0.12%</span></div>
+    <div class="drop-row"><span>Tower Key</span><span class="rate">0.1094%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.3484%</span></div>
+    <div class="drop-row"><span>Dark Grail</span><span class="rate">0.235%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.145%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Saber Boss [World Boss]</div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">100%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">40%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">39%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">29%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">15%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">12%</span></div>
+    <div class="drop-row"><span>Saber Armor</span><span class="rate">5%</span></div>
+    <div class="drop-row"><span>Saber (Sword)</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">1.25%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.55%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.5%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.125%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.002%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Qin Shi Boss [World Boss]</div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">100%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">75%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">65%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">52%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">18%</span></div>
+    <div class="drop-row"><span>Jade Tablet</span><span class="rate">6%</span></div>
+    <div class="drop-row"><span>Qin Shi Blindfold</span><span class="rate">2.5%</span></div>
+    <div class="drop-row"><span>Imperial Seal</span><span class="rate">2.5%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.6%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.6%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.15%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Gojo Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">58%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">42%</span></div>
+    <div class="drop-row"><span>Limitless Key</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">22.5%</span></div>
+    <div class="drop-row"><span>Void Fragment</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">18%</span></div>
+    <div class="drop-row"><span>Limitless Ring</span><span class="rate">8%</span></div>
+    <div class="drop-row"><span>Gojo Blindfold</span><span class="rate">5%</span></div>
+    <div class="drop-row"><span>Infinity Core</span><span class="rate">3%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.85%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.7%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.225%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Sukuna Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">65%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">52%</span></div>
+    <div class="drop-row"><span>Malevolent Key</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">24%</span></div>
+    <div class="drop-row"><span>Cursed Finger</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Dismantle Fang</span><span class="rate">8%</span></div>
+    <div class="drop-row"><span>Sukuna Collar</span><span class="rate">4%</span></div>
+    <div class="drop-row"><span>Crimson Heart</span><span class="rate">2.5%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.9%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.75%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.25%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Yuji Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">45%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">45%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">32%</span></div>
+    <div class="drop-row"><span>Energy Core</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">15%</span></div>
+    <div class="drop-row"><span>Flash Impact</span><span class="rate">9%</span></div>
+    <div class="drop-row"><span>Yuji Hair</span><span class="rate">5%</span></div>
+    <div class="drop-row"><span>Divergent Pulse</span><span class="rate">4%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.8%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.7%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.2%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Jinwoo Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">78%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">65%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">35%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">35%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Abyss Edge</span><span class="rate">17.5%</span></div>
+    <div class="drop-row"><span>Dark Ring</span><span class="rate">7%</span></div>
+    <div class="drop-row"><span>Jinwoo Cape</span><span class="rate">3%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">2.5%</span></div>
+    <div class="drop-row"><span>Shadow Heart</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.85%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.275%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Alucard Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">85%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">80%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">40%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">37.5%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">33%</span></div>
+    <div class="drop-row"><span>Soul Amulet</span><span class="rate">8%</span></div>
+    <div class="drop-row"><span>Alucard Coat</span><span class="rate">3%</span></div>
+    <div class="drop-row"><span>Casull</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Blood Ring</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.5%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.15%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.3%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Ragna Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">71%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">58%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Wyrm Brand</span><span class="rate">25%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">75%</span></div>
+    <div class="drop-row"><span>Black Frost</span><span class="rate">9%</span></div>
+    <div class="drop-row"><span>Silver Requiem</span><span class="rate">3.5%</span></div>
+    <div class="drop-row"><span>Ragna Sigil</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.5%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Aizen Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">100%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">95%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">45%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">40%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">36%</span></div>
+    <div class="drop-row"><span>Mirage Pendant</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Illusion Prism</span><span class="rate">8%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">4%</span></div>
+    <div class="drop-row"><span>Reiatsu Core</span><span class="rate">3%</span></div>
+    <div class="drop-row"><span>Aizen Haori</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Hogyoku Fragment</span><span class="rate">1.2%</span></div>
+    <div class="drop-row"><span>Transmutation Shard</span><span class="rate">1%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.45%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.75%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.325%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Ichigo Boss [World Boss]</div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">100%</span></div>
+    <div class="drop-row"><span>Haki Color Reroll</span><span class="rate">85%</span></div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">80%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">60%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">20%</span></div>
+    <div class="drop-row"><span>Soul Fragment</span><span class="rate">6%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">2.25%</span></div>
+    <div class="drop-row"><span>Hollow Mask</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Spiritual Core</span><span class="rate">1.75%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1%</span></div>
+    <div class="drop-row"><span>Soul Flame</span><span class="rate">0.7%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">0.85%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.225%</span></div>
+</div>
+<div class="card">
+    <div class="name">Madoka Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">75%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">62%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">35%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">32.5%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">30%</span></div>
+    <div class="drop-row"><span>Grief Seed</span><span class="rate">15%</span></div>
+    <div class="drop-row"><span>Madoka Bow</span><span class="rate">4%</span></div>
+    <div class="drop-row"><span>Hope Shard</span><span class="rate">2.5%</span></div>
+    <div class="drop-row"><span>Madoka Ribbon</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.2%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.275%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Yamato Boss [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">82%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">70%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">38%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">35%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">32%</span></div>
+    <div class="drop-row"><span>Takeru Mikoto</span><span class="rate">10%</span></div>
+    <div class="drop-row"><span>Yamato Horns</span><span class="rate">3.5%</span></div>
+    <div class="drop-row"><span>Glacier Shard</span><span class="rate">3%</span></div>
+    <div class="drop-row"><span>Oden Journal</span><span class="rate">1.5%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.4%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.2%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.3%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Strongest Shinobi [World Boss]</div>
+    <div class="drop-row"><span>Race Reroll</span><span class="rate">90%</span></div>
+    <div class="drop-row"><span>Trait Reroll</span><span class="rate">85%</span></div>
+    <div class="drop-row"><span>Boss Ticket</span><span class="rate">42%</span></div>
+    <div class="drop-row"><span>Void Reaver</span><span class="rate">38%</span></div>
+    <div class="drop-row"><span>Dungeon Key</span><span class="rate">35%</span></div>
+    <div class="drop-row"><span>God Tree Fruit</span><span class="rate">12%</span></div>
+    <div class="drop-row"><span>Shinobi Headband</span><span class="rate">4%</span></div>
+    <div class="drop-row"><span>Eyes of Karma</span><span class="rate">2%</span></div>
+    <div class="drop-row"><span>Broken Sword</span><span class="rate">3.5%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.6%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.4%</span></div>
+    <div class="drop-row"><span>Conqueror Fragment</span><span class="rate">0.315%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Secret Chest</span><span class="rate">0.02%</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="name">Atomic [Special Boss]</div>
+    <div class="drop-row"><span>Magic Shard</span><span class="rate">11.20%</span></div>
+    <div class="drop-row"><span>Shadow Remnant</span><span class="rate">3.65%</span></div>
+    <div class="drop-row"><span>Atomic Outfit</span><span class="rate">0.96%</span></div>
+    <div class="drop-row"><span>Eminence Essence</span><span class="rate">0.90%</span></div>
+    <div class="drop-row"><span>Artifact: Black Horizon</span><span class="rate">0.58%</span></div>
+    <div class="drop-row"><span>Atomic Omen</span><span class="rate">0.38%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.25%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.1%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.116%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.0013%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Moon Slayer [Special Boss]</div>
+    <div class="drop-row"><span>Demon Remnant</span><span class="rate">10.56%</span></div>
+    <div class="drop-row"><span>Lunar Essence</span><span class="rate">3.65%</span></div>
+    <div class="drop-row"><span>Moon Outfit</span><span class="rate">0.96%</span></div>
+    <div class="drop-row"><span>Crescent Shard</span><span class="rate">0.83%</span></div>
+    <div class="drop-row"><span>Artifact: Celestial Rupture</span><span class="rate">0.58%</span></div>
+    <div class="drop-row"><span>Moon Crest</span><span class="rate">0.35%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.18%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">1.05%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.108%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.0012%</span></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="name">Ice Queen [Special Boss]</div>
+    <div class="drop-row"><span>Battle Shard</span><span class="rate">10.24%</span></div>
+    <div class="drop-row"><span>Glacier Remnant</span><span class="rate">3.39%</span></div>
+    <div class="drop-row"><span>Ice Queen Outfit</span><span class="rate">0.90%</span></div>
+    <div class="drop-row"><span>Frozen Brand</span><span class="rate">0.77%</span></div>
+    <div class="drop-row"><span>Artifact: Abyssal Crown</span><span class="rate">0.55%</span></div>
+    <div class="drop-row"><span>Ice Core</span><span class="rate">0.33%</span></div>
+    <div class="drop-row"><span>Passive Shard</span><span class="rate">1.12%</span></div>
+    <div class="drop-row"><span>Calamity Seal</span><span class="rate">0.98%</span></div>
+    <div class="chest-box">
+        <div class="drop-row"><span>Mythical Chest</span><span class="rate">0.105%</span></div>
+        <div class="drop-row"><span>Aura Crate</span><span class="rate">0.0011%</span></div>
+</div> </div> <style>
+    /* 1. Global Setup (Main Website Colors) */
+    body {
+        background-color: #000; /* Pure black like main web */
+        color: #ddd;
+        font-family: 'Segoe UI', BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Grid Container for Cards */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        max-width: 1400px;
+        margin: 20px auto 60px;
+        padding: 0 20px;
+    }
+
+    /* 3. The Branded Card Look */
+    .card {
+        background: #0d1117; /* Dark background from boss guide */
+        border: 1px solid cyan; /* Cyan glow border from main web */
+        border-radius: 5px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 15px rgba(0,255,255,0.1); /* Subtle cyan shadow */
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0,255,255,0.3); /* Stronger glow on hover */
+    }
+
+    /* 4. Boss Name (Deep Orange like Brand Name) */
+    .name {
+        color: #ff9800;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(0,255,255,0.3); /* Translucent cyan line */
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    /* 5. Drop Rows (Clean List) */
+    .drop-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(48, 54, 61, 0.4);
+        font-size: 0.95rem;
+    }
+
+    /* Regular Item Color */
+    .item-label {
+        color: #bbb;
+    }
+
+    /* Rate Color (Green like boss guide) */
+    .rate {
+        color: #7ee787;
+        font-weight: bold;
+    }
+
+    /* Chest Box Highlight */
+    .chest-box {
+        background: rgba(0,0,0,0.4);
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px dashed rgba(48, 54, 61, 0.6);
+    }
+</style>

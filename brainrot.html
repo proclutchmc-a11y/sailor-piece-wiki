@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steal A Brainrot Codes | ProClutch Hub</title>
+    <style>
+        :root {
+            --bg: #050005;
+            --card-bg: #120012;
+            --neon-pink: #ff00ff;
+            --neon-purple: #bc13fe;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* --- Header Section --- */
+        .header {
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #220022, var(--bg));
+            border-bottom: 2px solid var(--neon-pink);
+        }
+
+        h1 {
+            font-size: 38px;
+            text-transform: uppercase;
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
+            margin: 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #444;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { border-color: var(--neon-pink); color: white; }
+
+        /* --- Codes Grid --- */
+        .container { padding: 30px 15px; }
+        
+        .codes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .code-card {
+            background: var(--card-bg);
+            border: 2px solid #330033;
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        /* Rainbow-ish Pink Glow on Hover */
+        .code-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+        }
+
+        .code-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00ffcc;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .copy-button {
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .copy-button:hover {
+            filter: brightness(1.2);
+            letter-spacing: 1px;
+        }
+
+        /* --- Water Ripple Effect --- */
+        .ripple {
+            position: absolute;
+            background: rgba(255, 0, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple-animation { to { transform: scale(4); opacity: 0; } }
+
+        .footer { margin-top: 50px; padding: 20px; color: #444; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🧠 BRAINROT CODES HUB</h1>
+        <p style="color: #bbb;">Get the weirdest codes and steal the rewards!</p>
+        <a href="index.html" class="back-btn">← Back to Portal</a>
+    </div>
+
+    <div class="container">
+        <div class="codes-grid">
+            <div class="code-card">
+                <span class="code-title">SKIBIDI2026</span>
+                <button class="copy-button" onclick="copyCode('SKIBIDI2026')">Copy Code</button>
+            </div>
+
+            <div class="code-card">
+                <span class="code-title">OHIOGYATT</span>
+                <button class="copy-button" onclick="copyCode('OHIOGYATT')">Copy Code</button>
+            </div>
+
+            <div class="code-card">
+                <span class="code-title">RIZZLER99</span>
+                <button class="copy-button" onclick="copyCode('RIZZLER99')">Copy Code</button>
+            </div>
+
+            <div class="code-card">
+                <span class="code-title">SIGMAUPDATE</span>
+                <button class="copy-button" onclick="copyCode('SIGMAUPDATE')">Copy Code</button>
+            </div>
+            
+            </div>
+    </div>
+
+    <div class="footer">PROCLUTCH BRAINROT SECTION | DO NOT COPE</div>
+
+    <script>
+        // Copy Code Function
+        function copyCode(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Code Copied: " + text);
+            });
+        }
+
+        // Water Ripple Effect
+        document.addEventListener('mousedown', function(e) {
+            if (e.target.closest('.code-card')) {
+                const card = e.target.closest('.code-card');
+                const ripple = document.createElement('div');
+                ripple.classList.add('ripple');
+                
+                const rect = card.getBoundingClientRect();
+                ripple.style.left = `${e.clientX - rect.left}px`;
+                ripple.style.top = `${e.clientY - rect.top}px`;
+                
+                card.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            }
+        });
+    </script>
+
+</body>
+</html>
