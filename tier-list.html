@@ -3,211 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Weapons Tier List | Piratecorewiki</title>
+    <title>Official Sailor Piece Tier List</title>
     <style>
-        :root {
-            --ss-color: #ff0000;
-            --s-color: #ffae00;
-            --a-color: #d7df00;
-            --b-color: #22ff00;
-            --c-color: #00d9ff;
-            --bg-dark: #050505;
+        /* Pura page black aur neon style */
+        body { background: #000; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; }
+        
+        .tier-container { 
+            max-width: 1100px; margin: auto; border: 1px solid #222; 
+            border-radius: 12px; overflow: hidden; background: #050505; 
+            box-shadow: 0 0 20px rgba(0,0,0,1);
         }
 
-        body {
-            background-color: var(--bg-dark);
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
+        .tier-row { display: flex; border-bottom: 1px solid #1a1a1a; min-height: 100px; }
+
+        .label { 
+            width: 140px; display: flex; align-items: center; justify-content: center; 
+            font-size: 2rem; font-weight: 900; color: #000; text-transform: uppercase;
         }
 
-        h1 {
-            text-transform: uppercase;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #fff;
-            text-shadow: 0 0 15px rgba(255, 174, 0, 0.6);
+        .items { flex-grow: 1; display: flex; flex-wrap: wrap; padding: 20px; gap: 15px; align-items: center; }
+        
+        /* Weapon Card Design */
+        .weapon { 
+            background: #000; border: 2px solid #333; padding: 12px 20px; border-radius: 8px; 
+            font-weight: bold; transition: 0.3s; font-size: 0.95rem; color: #fff;
         }
 
-        .tier-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            border: 2px solid #222;
-            border-radius: 15px;
-            overflow: hidden;
-            background: #0a0a0a;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .weapon:hover { transform: scale(1.05); background: #111; }
+
+        /* SS (SAILOR) - SABSE BADA AUR NEON GLOW */
+        .ss-label { background: #56e3ff; box-shadow: inset 0 0 20px rgba(0,0,0,0.3); } 
+        .ss-row { min-height: 160px; background: rgba(86, 227, 255, 0.03); }
+        .ss-weapon { 
+            border-color: #56e3ff; 
+            box-shadow: 0 0 20px #56e3ff, inset 0 0 10px #56e3ff; 
+            font-size: 1.2rem; padding: 18px 28px; 
         }
 
-        .tier-row {
-            display: flex;
-            min-height: 120px;
-            border-bottom: 2px solid #222;
-            transition: 0.3s ease;
+        /* Baki Ranks ke Colors */
+        .s-label { background: #ff4646; }
+        .a-label { background: #ffaa46; }
+        .b-label { background: #ffff46; }
+        .c-label { background: #46ff46; }
+        .d-label { background: #4646ff; }
+        .f-label { background: #ff46ff; }
+
+        .back-btn { 
+            display: inline-block; margin-top: 40px; padding: 15px 35px; 
+            border: 2px solid #ffae00; color: #ffae00; text-decoration: none; 
+            border-radius: 50px; font-weight: bold; transition: 0.3s;
         }
-
-        .tier-row:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .tier-label {
-            width: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #000;
-            text-shadow: 0 0 5px rgba(255,255,255,0.5);
-        }
-
-        .items-area {
-            flex-grow: 1;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 15px;
-            align-items: center;
-        }
-
-        /* Rank Styles */
-        .ss { background: var(--ss-color); box-shadow: inset 0 0 20px #fff; }
-        .s  { background: var(--s-color); }
-        .a  { background: var(--a-color); }
-        .b  { background: var(--b-color); }
-        .c  { background: var(--c-color); }
-
-        /* Weapon Card */
-        .weapon-card {
-            background: #111;
-            border: 1px solid #333;
-            padding: 12px;
-            border-radius: 10px;
-            min-width: 100px;
-            text-align: center;
-            transition: 0.3s;
-            position: relative;
-        }
-
-        .weapon-card:hover {
-            transform: translateY(-5px) scale(1.05);
-            border-color: #fff;
-            box-shadow: 0 0 15px rgba(255,255,255,0.3);
-        }
-
-        .weapon-icon { font-size: 1.5rem; display: block; margin-bottom: 5px; }
-        .weapon-name { font-size: 0.85rem; font-weight: bold; }
-
-        /* Glow Effects */
-        .glow-ss { border-color: var(--ss-color); box-shadow: 0 0 10px var(--ss-color); }
-        .glow-s  { border-color: var(--s-color); box-shadow: 0 0 10px var(--s-color); }
-
-        .back-home {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
-            background: #ffae00;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .back-home:hover { background: #fff; transform: scale(1.1); }
+        .back-btn:hover { background: #ffae00; color: #000; box-shadow: 0 0 30px #ffae00; }
     </style>
 </head>
 <body>
 
-    <h1>Weapon Tier List (All)</h1>
+    <h1 style="color: #56e3ff; text-shadow: 0 0 20px #56e3ff; font-size: 3rem;">SAILOR PIECE TIER LIST</h1>
 
     <div class="tier-container">
+        <div class="tier-row ss-row">
+            <div class="label ss-label">SAILOR</div>
+            <div class="items">
+                <div class="weapon ss-weapon">⚔️ Ice Queen</div>
+                <div class="weapon ss-weapon">⚔️ Abyssal Empress</div>
+            </div>
+        </div>
         <div class="tier-row">
-            <div class="tier-label ss">SS</div>
-            <div class="items-area">
-                <div class="weapon-card glow-ss">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Ice Queen</span>
-                </div>
-                <div class="weapon-card glow-ss">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Abyssal Empress</span>
-                </div>
+            <div class="label s-label">S</div>
+            <div class="items">
+                <div class="weapon" style="border-color:#ff4646; box-shadow: 0 0 15px #ff4646;">⚔️ Atomic</div>
+                <div class="weapon" style="border-color:#ff4646; box-shadow: 0 0 15px #ff4646;">⚔️ King of Heroes</div>
+                <div class="weapon" style="border-color:#ff4646; box-shadow: 0 0 15px #ff4646;">⚔️ Moon Slayer</div>
+                <div class="weapon" style="border-color:#ff4646; box-shadow: 0 0 15px #ff4646;">⚔️ True Manipulator</div>
             </div>
         </div>
 
         <div class="tier-row">
-            <div class="tier-label s">S</div>
-            <div class="items-area">
-                <div class="weapon-card glow-s">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Atomic [B10]</span>
-                </div>
-                <div class="weapon-card glow-s">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">King of Heroes</span>
-                </div>
-                <div class="weapon-card glow-s">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Moon Slayer</span>
-                </div>
+            <div class="label a-label">A</div>
+            <div class="items">
+                <div class="weapon">⚔️ Corrupted Excalibur</div>
+                <div class="weapon">⚔️ Yamato</div>
+                <div class="weapon">⚔️ Demon King</div>
+                <div class="weapon">⚔️ Strongest In History</div>
             </div>
         </div>
 
         <div class="tier-row">
-            <div class="tier-label a">A</div>
-            <div class="items-area">
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Yamato [B10]</span>
-                </div>
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Corrupted Excalibur</span>
-                </div>
+            <div class="label b-label">B</div>
+            <div class="items">
+                <div class="weapon">⚔️ Shadow Monarch</div>
+                <div class="weapon">⚔️ Sin of Pride</div>
+                <div class="weapon">⚔️ Slime</div>
+                <div class="weapon">⚔️ Love Maiden</div>
+                <div class="weapon">⚔️ Dragon Slayer</div>
+            </div>
+        </div>
+<div class="tier-row">
+            <div class="label c-label">C</div>
+            <div class="items">
+                <div class="weapon">⚔️ Soul Reaper</div>
+                <div class="weapon">⚔️ Shadow</div>
+                <div class="weapon">⚔️ Solo Hunter</div>
+                <div class="weapon">⚔️ Curse King</div>
+                <div class="weapon">⚔️ Gryphon</div>
+                <div class="weapon">⚔️ Limitless Sorcerer</div>
+                <div class="weapon">⚔️ Qin Shi</div>
             </div>
         </div>
 
         <div class="tier-row">
-            <div class="tier-label b">B</div>
-            <div class="items-area">
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Sin of Pride</span>
-                </div>
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Slime</span>
-                </div>
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Dragon Slayer</span>
-                </div>
+            <div class="label d-label">D</div>
+            <div class="items">
+                <div class="weapon">⚔️ Cursed Vessel</div>
+                <div class="weapon">⚔️ Excalibur</div>
+                <div class="weapon">⚔️ Vampire King</div>
+                <div class="weapon">⚔️ Dark Blade</div>
             </div>
         </div>
 
         <div class="tier-row">
-            <div class="tier-label c">C</div>
-            <div class="items-area">
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Gryphon [B3]</span>
-                </div>
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Soul Reaper</span>
-                </div>
-                <div class="weapon-card">
-                    <span class="weapon-icon">⚔️</span>
-                    <span class="weapon-name">Shadow [B10]</span>
-                </div>
+            <div class="label f-label" style="background: #555;">F</div>
+            <div class="items">
+                <div class="weapon" style="opacity: 0.6;">⚔️ Combat</div>
+                <div class="weapon" style="opacity: 0.6;">⚔️ Katana</div>
             </div>
         </div>
+    </div> <div style="margin-top: 30px; font-size: 0.8rem; color: #444;">
+        *Tiers are based on latest game meta and community feedback.
     </div>
 
-    <a href="index.html" class="back-home">⬅️ Back to Master Hub</a>
+    <a href="index.html" class="back-btn">⬅️ RETURN TO MASTER HUB</a>
 
 </body>
 </html>
