@@ -15,15 +15,33 @@
     
     <div style="margin: 15px 0;">
         <span style="color: #ff9800; font-weight: bold; border: 1px solid #ff9800; padding: 5px 15px; border-radius: 3px; font-size: 0.8rem;">
-            UPDATED: APRIL 9, 2026
+            UPDATED: APRIL 13, 2026
         </span>
     </div>
 
     <div style="margin-top: 30px;">
-        <input type="text" id="search" placeholder="Search for Ice Queen, Moon Slayer..." onkeyup="filterData()" 
-               style="width: 85%; max-width: 600px; padding: 15px; background: #0a0a0a; border: 2px solid #333; border-radius: 8px; color: white; outline: none;">
-    </div>
-</div>
+        <div style="margin-top: 30px;">
+            <input type="text" id="bossSearch" placeholder="🔍 Search Boss, Item, or Chest..." onkeyup="searchFilter()"
+                   style="width: 85%; max-width: 600px; padding: 15px; background: #0a0a0a; border: 2px solid #ff9800; border-radius: 8px; color: white; outline: none; box-shadow: 0 0 15px rgba(255, 152, 0, 0.2);">
+        </div>
+
+    <script>
+    function searchFilter() {
+        let input = document.getElementById('bossSearch');
+        let filter = input.value.toUpperCase();
+        // Humne yahan '.card' kar diya hai taaki ye tere bosses ko pehchan sake
+        let cards = document.querySelectorAll('.card'); 
+
+        cards.forEach(card => {
+            let text = card.innerText || card.textContent;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                card.style.display = ""; 
+            } else {
+                card.style.display = "none"; 
+            }
+        });
+    }
+</script>
 
 <style>
 @keyframes pulse {
