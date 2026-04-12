@@ -77,7 +77,18 @@
                 <div class="weapon" style="border-color:#ff4646; box-shadow: 0 0 15px #ff4646;">⚔️ True Manipulator</div>
             </div>
         </div>
+/* ... baki saara purana code ... */
 
+        .back-btn:hover { background: #ffae00; color: #000; box-shadow: 0 0 30px #ffae00; }
+
+        /* --- YE WALA CODE YAHAN PASTE KARO --- */
+        @media (max-width: 768px) {
+            .tier-row { flex-direction: column; }
+            .label { width: 100%; height: 50px; font-size: 1.5rem; }
+            .items { justify-content: center; }
+            .weapon { width: 140px; font-size: 0.85rem; }
+            h1 { font-size: 1.8rem; }
+        }
         <div class="tier-row">
             <div class="label a-label">A</div>
             <div class="items">
@@ -87,7 +98,25 @@
                 <div class="weapon">⚔️ Strongest In History</div>
             </div>
         </div>
+<div style="margin: 20px auto; max-width: 400px; padding: 0 20px;">
+    <input type="text" id="tierSearch" placeholder="🔍 Search weapon..." 
+           style="width: 100%; padding: 12px; border-radius: 25px; border: 2px solid #56e3ff; background: #111; color: white; text-align: center; outline: none; box-shadow: 0 0 15px #56e3ff; font-weight: bold;">
+</div>
 
+<script>
+    document.getElementById('tierSearch').addEventListener('keyup', function() {
+        let filter = this.value.toUpperCase();
+        let weapons = document.querySelectorAll('.weapon');
+        weapons.forEach(weapon => {
+            let text = weapon.textContent || weapon.innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                weapon.style.display = "";
+            } else {
+                weapon.style.display = "none";
+            }
+        });
+    });
+</script>
         <div class="tier-row">
             <div class="label b-label">B</div>
             <div class="items">
