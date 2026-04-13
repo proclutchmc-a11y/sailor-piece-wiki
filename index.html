@@ -12,55 +12,124 @@
     <meta property="og:image" content="step1.png">
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="6eoiNjvnMC3XvLnadf_dFqXdvnR4Lz-aUhbwau9ujfM" />           
-    <style>
-        body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
-        
-        /* HEADER SECTION */
-        .hub-header { text-align: center; padding: 70px 20px; background: linear-gradient(to bottom, #0d1117, #000); border-bottom: 2px solid #ff9800; }
-        h1 { color: #ff9800; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; margin: 0; text-shadow: 0 0 20px rgba(255, 152, 0, 0.4); }
-        .status { color: #39ff14; font-size: 0.9rem; font-weight: bold; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
+<style>
+    body { 
+        background: #02060a; 
+        color: #fff; 
+        font-family: 'Segoe UI', sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; 
+    }
 
-        /* PORTAL BUTTONS GRID */
-        .portal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 50px auto; padding: 20px; }
+    /* HEADER SECTION - Modern & Clean */
+    .hub-header { 
+        text-align: center; 
+        padding: 80px 20px; 
+        background: radial-gradient(circle at top, #102a43 0%, #02060a 70%);
+        border-bottom: 1px solid #1a3a4a;
+    }
+    
+    h1 { 
+        font-size: 3rem; 
+        letter-spacing: 6px; 
+        text-transform: uppercase; 
+        margin: 0;
+        background: linear-gradient(to right, #fff, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+    }
 
-        .portal-button { 
-            background: #0d1117; 
-            border: 2px solid #222; 
-            padding: 40px 20px; 
-            border-radius: 15px; 
-            text-decoration: none; 
-            color: inherit; 
-            transition: 0.4s;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .portal-button:hover { 
-            border-color: cyan; 
-            transform: translateY(-10px); 
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1); 
-            background: #111;
-        }
-        
-        .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
-        .title { color: #ff9800; font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
-        .desc { color: #777; font-size: 0.9rem; margin-top: 10px; }
+    .status { 
+        color: #00ff88; 
+        font-size: 0.8rem; 
+        font-weight: bold; 
+        margin-top: 15px; 
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
 
-        /* 🏆 SPECIAL TIER LIST TAG */
-        .coming-soon {
-            background: #ff3e3e;
-            color: white;
-            font-size: 0.7rem;
-            padding: 5px 15px;
-            border-radius: 20px;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .work-in-progress { color: #ff3e3e; font-weight: bold; font-style: italic; }
-    </style>
+    /* PORTAL BUTTONS GRID */
+    .portal-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px; 
+        max-width: 1100px; 
+        margin: -40px auto 50px auto; 
+        padding: 20px; 
+    }
+
+    .portal-button { 
+        background: rgba(15, 30, 46, 0.6); 
+        border: 1px solid #243b4d; 
+        padding: 35px 25px; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        color: inherit; 
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        text-align: center; 
+        position: relative; 
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portal-button:hover { 
+        border-color: #00d4ff; 
+        transform: translateY(-10px); 
+        box-shadow: 0 15px 35px rgba(0, 212, 255, 0.2); 
+        background: rgba(20, 45, 70, 0.8);
+    }
+
+    .icon { 
+        font-size: 3.5rem; 
+        margin-bottom: 20px; 
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .portal-button:hover .icon {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 10px #00d4ff);
+    }
+
+    .title { 
+        font-size: 1.4rem; 
+        font-weight: 800; 
+        letter-spacing: 1px; 
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .desc { 
+        color: #94a3b8; 
+        font-size: 0.95rem; 
+        line-height: 1.5;
+    }
+
+    /* ICE QUEEN SPECIAL STYLE */
+    a[href="Craft.html"] {
+        border: 1px solid #ffcc0044;
+    }
+    
+    a[href="Craft.html"] .title {
+        color: #ffcc00;
+    }
+
+    .coming-soon { 
+        background: #ff3e3e; 
+        color: white; 
+        font-size: 0.7rem; 
+        padding: 4px 12px; 
+        border-radius: 50px; 
+        position: absolute; 
+        top: 15px; 
+        right: 15px; 
+        font-weight: bold; 
+    }
+</style>
 </head>
 <body>
 
@@ -90,17 +159,17 @@
         <span class="title">Brainrot Codes</span>
         <p class="desc">Special "Brainrot" themed codes and rewards.</p>
     </a>
-        href="tier-list.html"
-        <span class="coming-soon">Next Update</span>
-        <span class="icon">🏆</span>
-        <span class="title" style="color:#777;">Tier Lists</span>
-        <p class="desc" class="work-in-progress">Building the Ultimate Ranking... <br><b>Coming Tomorrow!</b></p>
-    </a>
-    <a href="best-build.html" class="portal-button">
-        <span class="icon">❄️</span>
-        <span class="title">Best Build (Ice Meta)</span>
-        <p class="desc">The Ultimate Level 13,000 Swordblessed Build Guide.</p>
-    </a>
-</div>
+    <a href="Craft.html" class="portal-button">
+            <span class="icon">❄️</span>
+            <span class="title" style="color:#00d4ff;">Ice Queen Craft</span>
+            <p class="desc">How to Obtain, Crafting Materials and F-Move Mastery.</p>
+        </a>
+
+        <a href="best-build.html" class="portal-button">
+            <span class="icon">💠</span>
+            <span class="title">Best Build (Ice Meta)</span>
+            <p class="desc">The Ultimate Level 13,000 Swordblessed Build Guide.</p>
+        </a>
+    </div>
 </body>
 </html>
