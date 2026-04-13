@@ -1,393 +1,743 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Ice Meta | Level 13,000 Build</title>
-    <style>
-        :root {
-            --neon-purple: #bc13fe;
-            --ice-blue: #00f2ff;
-            --dark-bg: #05000a;
-            --card-bg: rgba(20, 0, 50, 0.8);
-            --border: 1px solid rgba(188, 19, 254, 0.3);
-        }
-
-        body {
-            background: var(--dark-bg);
-            color: white;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: radial-gradient(circle, #1a0033 0%, #05000a 100%);
-            border-bottom: 2px solid var(--neon-purple);
-            margin-bottom: 30px;
-        }
-
-        .header-section h1 {
-            font-size: 3rem;
-            color: var(--ice-blue);
-            text-transform: uppercase;
-            text-shadow: 0 0 20px var(--ice-blue);
-            margin: 0;
-        }
-
-        .header-section p {
-            color: var(--neon-purple);
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #fff;
+.back-nav a {
             text-decoration: none;
+            color: var(--ice-blue);
             font-size: 0.9rem;
-            border: 1px solid #333;
+            text-transform: uppercase;
+            border: 1px solid var(--ice-blue);
             padding: 5px 15px;
-            border-radius: 20px;
             transition: 0.3s;
         }
 
-        .back-link:hover { background: var(--neon-purple); border-color: var(--neon-purple); }
-      .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        .back-nav a:hover {
+            background: var(--ice-blue);
+            color: black;
+            box-shadow: 0 0 10px var(--ice-blue);
         }
 
-        .card {
-            background: var(--card-bg);
-            border: var(--border);
+        /* Section Styling */
+        .build-card {
+            background: var(--glass-bg);
+            border: 1px solid rgba(188, 19, 254, 0.3);
             border-radius: 12px;
-            padding: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--neon-purple);
-            box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);
+        .build-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--neon-purple);
         }
 
-        .card h2 {
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
             color: var(--ice-blue);
-            font-size: 1.4rem;
-            margin-top: 0;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .stat-label { color: var(--text-gray); font-size: 0.95rem; }
-        .stat-value { color: #fff; font-weight: bold; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
-
-        .tag {
-            background: var(--neon-purple);
-            color: black;
-            font-size: 0.7rem;
-            font-weight: 800;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
+        .stat-box {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 2px solid var(--secondary-glow);
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-
-        th {
-            background: rgba(188, 19, 254, 0.1);
-            color: var(--neon-purple);
-            text-align: left;
-            padding: 12px;
-        }
-
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #222;
-        }
-
-        .highlight-text { color: var(--ice-blue); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="header-section">
-        <a href="index.html" class="back-link">← Return to Hub</a>
-        <h1>THE ULTIMATE ICE META</h1>
-        <p>MAX DAMAGE BUILD | VERSION 2026.04</p>
-    </div>
-
     <div class="container">
-        
-        <div class="card" style="margin-bottom: 30px; border-left: 5px solid var(--ice-blue);">
-            <h2>⚔️ Primary Weapon: Ice Queen Sword</h2>
-            <div class="stat-row">
-                <span class="stat-label">Main Move:</span>
-                <span class="stat-value highlight-text">Blizzard (100B+ Damage)</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Scaling:</span>
-                <span class="stat-value">Sword Mastery + Ice Buffs</span>
-            </div>
-            <p style="font-size: 0.9rem; color: #ccc; margin-top: 15px;">
-                Note: Ye sword mandatory hai Ice Update meta ke liye. Iska Blizzard move screen-clear damage deta hai.
-            </p>
-        </div>
+        <nav class="back-nav">
+            <a href="index.html">← Return to Hub</a>
+        </nav>
 
-        <div class="card" style="margin-bottom: 30px;">
-            <h2>❄️ Required Title: Frost Empress</h2>
-            <div class="stat-row">
-                <span class="stat-label">Damage Boost:</span>
-                <span class="stat-value" style="color: #00ff00;">+87.5% Overall Damage</span>
+        <header class="hero-section">
+            <p>Sailor Piece: Level 13,000 Milestone</p>
+            <h1>Ultimate Ice Meta</h1>
+            <div style="color: var(--celestial-glow); font-size: 1.2rem; font-weight: bold; margin-top: 10px;">
+                STATUS: [DOMINATING THE NORTHERN SEAS]
             </div>
-            <div class="stat-row">
-                <span class="stat-label">How to Get:</span>
-                <span class="stat-value">Drop from Ice Queen (Boss Island)</span>
+        </header>
+        <div class="build-card">
+            <div class="section-title">
+                <span>❄️</span> Primary Weapon: Ice Queen Sword
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Pity System:</span>
-                <span class="stat-value">Guaranteed at 155 Kills</span>
-            </div>
-            <p style="font-size: 0.85rem; background: rgba(255,0,0,0.1); padding: 10px; border-radius: 5px; margin-top: 10px;">
-                ⚠️ <strong>Important:</strong> Ye title "Ice Queen Sword" craft karne ke liye zaroori material bhi hai. Iske bina craft nahi hoga.
-            </p>
-        </div>
-        <div class="grid-layout">
             
-            <div class="card">
-                <h2>💎 Rune: Primordial</h2>
-                <div class="stat-row">
-                    <span class="stat-label">Damage Buff:</span>
-                    <span class="stat-value highlight-text">+120% DMG</span>
+            <div class="detail-grid">
+                <div class="stat-box">
+                    <h4 style="color: var(--ice-blue); margin-bottom: 8px;">How to Acquire:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        This sword is a rare drop from the <strong>Ice Queen Boss</strong> located on the <strong>Frozen North Island</strong>. It requires high damage output to secure the drop.
+                    </p>
                 </div>
-                <div class="stat-row">
-                    <span class="stat-label">Max Level:</span>
-                    <span class="stat-value">Level 60</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Location:</span>
-                    <span class="stat-value">Infinite Tower (Floor 75+)</span>
+
+                <div class="stat-box">
+                    <h4 style="color: var(--ice-blue); margin-bottom: 8px;">Crafting & Mastery:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        To fully unlock its potential, you must craft it using materials dropped by the boss. Note: The <strong>Frost Empress</strong> title is a mandatory material for the final craft.
+                    </p>
                 </div>
             </div>
 
-            <div class="card">
-                <h2>✨ Trait: Celestial</h2>
-                <div class="stat-row">
-                    <span class="stat-label">Damage Multiplier:</span>
-                    <span class="stat-value" style="color: #ff00ff;">2.20x DMG</span>
+            <div style="margin-top: 25px; padding: 15px; background: rgba(0, 242, 255, 0.05); border-radius: 8px; border: 1px dashed var(--ice-blue);">
+                <h4 style="color: var(--ice-blue);">Signature Move: Blizzard</h4>
+                <p style="font-size: 0.95rem; line-height: 1.4;">
+                    The ultimate screen-clear move. With the <strong>Celestial Trait's -30% Cooldown</strong>, Blizzard becomes a spam-able attack capable of dealing over <strong>100B+ Damage</strong> per tick, making it the highest DPS move in the 2026.04 Meta.
+                </p>
+            </div>
+        </div>
+        <div class="build-card" style="border-color: var(--celestial-glow);">
+            <div class="section-title" style="color: var(--celestial-glow);">
+                <span>👑</span> Essential Title: Frost Empress
+            </div>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: var(--celestial-glow);">
+                    <h4 style="color: var(--celestial-glow); margin-bottom: 8px;">Acquisition Strategy:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        This title is obtained by defeating the <strong>Ice Queen Boss</strong>. It is not just a cosmetic; it is a core component of the Ice Meta build.
+                    </p>
                 </div>
-                <div class="stat-row">
-                    <span class="stat-label">HP Multiplier:</span>
-                    <span class="stat-value">1.65x HP</span>
+
+                <div class="stat-box" style="border-left-color: var(--celestial-glow);">
+                    <h4 style="color: var(--celestial-glow); margin-bottom: 8px;">The Pity System:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        If luck isn't on your side, the game guarantees this title after <strong>155 Confirmed Kills</strong>. It is highly recommended to farm this before attempting A10 Ascension.
+                    </p>
                 </div>
-                <div class="stat-row">
-                    <span class="stat-label">Rarity:</span>
-                    <span class="stat-value">SSS (Super Rare)</span>
+            </div>
+
+            <div style="margin-top: 25px; padding: 20px; background: rgba(0, 255, 204, 0.1); border-radius: 8px; text-align: center;">
+                <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--celestial-glow); letter-spacing: 2px;">Total Damage Multiplier</div>
+                <div style="font-size: 2.5rem; font-weight: bold; font-family: 'Orbitron', sans-serif; color: #fff;">+87.5%</div>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;">
+                    This title provides the highest consistent damage buff for Ice-based abilities in the game.
+                </p>
+            </div>
+        </div>
+        <div class="build-card" style="border-left: 4px solid var(--sss-rank);">
+            <div class="section-title">
+                <span style="color: var(--sss-rank);">⚡</span> The Engine: Trait & Stats Reroll
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--celestial-glow); font-family: 'Orbitron', sans-serif; font-size: 1.1rem; margin-bottom: 15px;">
+                    [TRAIT REROLL] — CELESTIAL
+                </h3>
+                <div class="detail-grid">
+                    <div class="stat-box" style="border-left-color: var(--celestial-glow);">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #fff;">2.20x</div>
+                        <div style="font-size: 0.7rem; color: var(--celestial-glow); text-transform: uppercase;">Damage Multiplier</div>
+                    </div>
+                    <div class="stat-box" style="border-left-color: var(--celestial-glow);">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #fff;">-30%</div>
+                        <div style="font-size: 0.7rem; color: var(--celestial-glow); text-transform: uppercase;">Cooldown (CDR)</div>
+                    </div>
+                    <div class="stat-box" style="border-left-color: var(--celestial-glow);">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #fff;">1.65x</div>
+                        <div style="font-size: 0.7rem; color: var(--celestial-glow); text-transform: uppercase;">Defense Boost</div>
+                    </div>
                 </div>
-                <p style="font-size: 0.8rem; color: #b3b3b3; margin-top: 10px;">
-                    Reroll cost: 700k+ Gems suggested for guaranteed SSS.
+            </div>
+
+            <div style="padding: 20px; background: rgba(255, 0, 85, 0.05); border: 1px solid rgba(255, 0, 85, 0.2); border-radius: 8px;">
+                <h3 style="color: var(--sss-rank); font-family: 'Orbitron', sans-serif; font-size: 1.1rem; margin-bottom: 10px;">
+                    [STATS REROLL] — SSS RANK
+                </h3>
+                <p style="font-size: 0.95rem; color: var(--text-dim);">
+                    This is a separate system from the Trait Reroll. Achieving the <strong>SSS Rank</strong> in your Stats Reroll is mandatory to maximize the base efficiency of your Melee, Defense, and Sword points. Without SSS Rank, your level 13,000 stats won't reach their true potential.
+                </p>
+                <div style="margin-top: 10px; font-weight: bold; color: var(--sss-rank); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+                    Target: Perfect SSS Stat Alignment
+                </div>
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: var(--ice-blue);">
+            <div class="section-title">
+                <span>🧬</span> Clan & Race Evolution
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h4 style="color: var(--ice-blue); font-family: 'Orbitron', sans-serif; font-size: 1rem; border-bottom: 1px solid rgba(0, 242, 255, 0.2); padding-bottom: 5px; margin-bottom: 15px;">
+                    CLAN: FROSTBANE [GOD-TIER]
+                </h4>
+                <div class="detail-grid">
+                    <div class="stat-box">
+                        <div style="color: var(--ice-blue); font-weight: bold;">+40% Raw Damage</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Pure Attack Power</div>
+                    </div>
+                    <div class="stat-box">
+                        <div style="color: var(--ice-blue); font-weight: bold;">+47% Max HP</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Massive Survivability</div>
+                    </div>
+                    <div class="stat-box">
+                        <div style="color: var(--ice-blue); font-weight: bold;">+10% Sword Damage</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Weapon Buff</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px; font-style: italic;">
+                    Special Passive: Each damage tick increases DMG Cap by 1.25x (0.00225x scaling).
                 </p>
             </div>
 
+            <div>
+                <h4 style="color: var(--neon-purple); font-family: 'Orbitron', sans-serif; font-size: 1rem; border-bottom: 1px solid rgba(188, 19, 254, 0.2); padding-bottom: 5px; margin-bottom: 15px;">
+                    RACE: SWORDBLESSED
+                </h4>
+                <div class="detail-grid">
+                    <div class="stat-box" style="border-left-color: var(--neon-purple);">
+                        <div style="color: #fff; font-weight: bold;">+20% Sword Multi</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Final Multiplier</div>
+                    </div>
+                    <div class="stat-box" style="border-left-color: var(--neon-purple);">
+                        <div style="color: #fff; font-weight: bold;">+75% Raw Damage</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Base Attack</div>
+                    </div>
+                    <div class="stat-box" style="border-left-color: var(--neon-purple);">
+                        <div style="color: #fff; font-weight: bold;">+3% Lifesteal</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Heal on Hit</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="grid-layout" style="margin-top: 20px;">
+        <div class="build-card" style="border-left: 4px solid #ffcc00;">
+            <div class="section-title">
+                <span style="color: #ffcc00;">💎</span> Legendary Rune: Primordial
+            </div>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ffcc00;">
+                    <h4 style="color: #ffcc00; margin-bottom: 8px;">How to Obtain:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Primordial Runes are high-tier drops found exclusively on <strong>Tower Island</strong>. You must push through the <strong>Infinite Tower</strong> floors to secure these.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ffcc00;">
+                    <h4 style="color: #ffcc00; margin-bottom: 8px;">Max Level Potential:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        At Level 60, this rune peaks, providing the necessary scaling required to handle Floor 50+ enemies in the Infinite Tower.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 20px; background: rgba(255, 204, 0, 0.1); border-radius: 8px; display: flex; justify-content: space-around; align-items: center;">
+                <div style="text-align: center;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #ffcc00;">Damage Buff</div>
+                    <div style="font-size: 1.8rem; font-weight: bold;">+120%</div>
+                </div>
+                <div style="width: 2px; height: 40px; background: rgba(255, 204, 0, 0.3);"></div>
+                <div style="text-align: center;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #ffcc00;">Final Multiplier</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: var(--celestial-glow);">x2.20</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">
+                Note: This multiplier stacks with your Celestial Trait for exponential damage growth.
+            </p>
+        </div>
+        <div class="build-card" style="border-left-color: var(--ice-blue);">
+            <div class="section-title">
+                <span>🛡️</span> Legendary Armor: Ice Queen Outfit
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                While other outfits like the Atomic Outfit offer decent stats, the <strong>Ice Queen Outfit</strong> is the definitive choice for this build. It provides the perfect balance of damage reduction and health scaling required for Level 13,000 gameplay.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--ice-blue);">Defense Boost</div>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #fff;">+125%</div>
+                </div>
+
+                <div class="stat-box">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--ice-blue);">Damage Reduction</div>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #fff;">23%</div>
+                </div>
+
+                <div class="stat-box">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--ice-blue);">Attack Damage</div>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #fff;">+98%</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 10px; background: rgba(0, 242, 255, 0.1); border-radius: 5px; font-size: 0.85rem; text-align: center; border: 1px solid var(--ice-blue);">
+                <strong>Pro Tip:</strong> Always prioritize the Ice Queen Outfit when farming the <strong>Frozen North</strong> to ensure your health pool stays above 28M.
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: #ff4d4d;">
+            <div class="section-title">
+                <span style="color: #ff4d4d;">🔥</span> Haki Mastery Levels
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">
+                Mastering Haki is a long grind, but essential for the Level 13,000 threshold. The best place to train your Haki mastery is <strong>Lawless Island</strong>, where the high-level mobs provide the fastest experience gain.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #fff; margin-bottom: 5px;">Armament (Lvl 100)</h4>
+                    <div style="font-size: 1.2rem; font-weight: bold; color: #ff4d4d;">+75.5% Total Damage</div>
+                    <p style="font-size: 0.75rem; color: var(--text-dim);">Pure physical and sword enhancement.</p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #fff; margin-bottom: 5px;">Conqueror's (Lvl 35)</h4>
+                    <div style="font-size: 1.2rem; font-weight: bold; color: #ff4d4d;">+34% Total Damage</div>
+                    <p style="font-size: 0.75rem; color: var(--text-dim);">The aura of a true king.</p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #fff; margin-bottom: 5px;">Observation (Lvl 50)</h4>
+                    <div style="font-size: 1.2rem; font-weight: bold; color: #00f2ff;">Max Dodge Potential</div>
+                    <p style="font-size: 0.75rem; color: var(--text-dim);">Auto-evade attacks with 15% bonus Defense.</p>
+                </div>
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: #ff4d4d; background: rgba(20, 0, 0, 0.4);">
+            <div class="section-title">
+                <span style="color: #ff4d4d;">🛡️</span> How to Obtain & Master Haki
+            </div>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #ff4d4d; margin-bottom: 8px;">The Haki Quest:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        To unlock Haki, you must travel to <strong>Lawless Island</strong> and find the <strong>Haki Master NPC</strong>. He will provide the initial quest requiring you to defeat powerful island guardians.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #ff4d4d; margin-bottom: 8px;">Training Mechanics:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Once unlocked, Haki levels up through <strong>usage and combat</strong>. Killing high-level NPCs on Lawless Island or Tower Island is the fastest way to hit Lvl 100 Mastery.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; border-bottom: 1px solid rgba(255, 77, 77, 0.3);">Haki Power Spikes:</h4>
+                <ul style="font-size: 0.85rem; color: var(--text-dim); padding-left: 20px;">
+                    <li><strong>Armament (Busoshoku):</strong> Grants physical hardening. Mandatory for damaging Logia-type users and boosting Ice Queen Sword DPS.</li>
+                    <li><strong>Observation (Kenbunshoku):</strong> Unlocks the "Dodge" bar. Higher levels increase the number of auto-dodges and expand your sensory range.</li>
+                    <li><strong>Conqueror's (Haoshoku):</strong> A rare power-up that adds a secondary damage multiplier to all attacks, including the Blizzard move.</li>
+                </ul>
+            </div>
             
-            <div class="card">
-                <h2>🧬 Race: Swordblessed</h2>
-                <div class="stat-row">
-                    <span class="stat-label">Multi-Damage:</span>
-                    <span class="stat-value highlight-text">+20% Multiplier</span>
+            <div style="margin-top: 15px; padding: 10px; border: 1px solid #ff4d4d; border-radius: 4px; font-size: 0.8rem; text-align: center; color: #ff4d4d;">
+                <strong>WARNING:</strong> Observation Haki training requires you to successfully dodge attacks repeatedly. Do not AFK while training this!
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: #00ff88; background: rgba(0, 40, 20, 0.4);">
+            <div class="section-title">
+                <span style="color: #00ff88;">✨</span> Shibuya Blessing System (B10)
+            </div>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #00ff88;">
+                    <h4 style="color: #00ff88; margin-bottom: 8px;">The Shibuya Quest:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Travel to <strong>Shibuya Station</strong> and locate the <strong>Blessing NPC</strong>. This system allows you to imbue your character with permanent stat multipliers ranging from B1 to B10.
+                    </p>
                 </div>
-                <div class="stat-row">
-                    <span class="stat-label">Sword Speed:</span>
-                    <span class="stat-value">+15% Attack Speed</span>
+
+                <div class="stat-box" style="border-left-color: #00ff88;">
+                    <h4 style="color: #00ff88; margin-bottom: 8px;">The Adamantite Grind:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        To upgrade to B10, you need <strong>Adamantite</strong>. This legendary material has a brutal <strong>0.225% drop rate</strong> from the <strong>Panda Sorcerer Boss</strong>.
+                    </p>
                 </div>
-                <p style="font-size: 0.8rem; color: #b3b3b3; margin-top: 10px;">
-                    Best race for Ice Queen users to maximize DPS.
+            </div>
+
+            <div style="margin-top: 25px; padding: 15px; background: rgba(0, 255, 136, 0.1); border-radius: 8px; border: 1px solid rgba(0, 255, 136, 0.3);">
+                <h4 style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; margin-bottom: 10px;">MAX BLESSING (B10) BENEFITS:</h4>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.2rem; font-weight: bold; color: #fff;">+25%</div>
+                        <div style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Total Damage</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.2rem; font-weight: bold; color: #fff;">+8%</div>
+                        <div style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Crit Damage</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.2rem; font-weight: bold; color: #fff;">+15%</div>
+                        <div style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Stamina Regen</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #aaa; text-align: center; font-style: italic;">
+                "The grind for Adamantite is the ultimate test of patience for any Ice Meta user."
+            </p>
+        </div>
+        <div class="build-card" style="border-left-color: #ffaa00; background: rgba(255, 170, 0, 0.05);">
+            <div class="section-title">
+                <span style="color: #ffaa00;">🚀</span> Character Ascension: The A10 Journey
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                Ascension is the process of breaking your character's limits. To reach the peak of the Ice Meta, hitting <strong>Ascension 10 (A10)</strong> is mandatory. This process resets your level but grants permanent, multiplicative power boosts that are required for end-game content.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ffaa00;">
+                    <h4 style="color: #ffaa00; margin-bottom: 8px;">The Level Cap:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        You must reach <strong>Level 13,000</strong> to attempt the final A10 Ascension. Farming at Tower Island is the most efficient way to grind this XP.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ffaa00;">
+                    <h4 style="color: #ffaa00; margin-bottom: 8px;">Damage Milestone:</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Before ascending to A10, your build must be capable of dealing at least <strong>7,500B (7.5 Trillion) Total Damage</strong> to pass the final trial NPC.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 15px; background: rgba(255, 170, 0, 0.1); border: 1px dashed #ffaa00; border-radius: 8px;">
+                <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; text-align: center;">A10 Permanent Buffs:</h4>
+                <div style="display: flex; justify-content: space-around; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: #ffaa00;">
+                    <span>+500% Base DMG</span>
+                    <span>+250% Base HP</span>
+                    <span>+50% Speed</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 15px; font-size: 0.8rem; color: #888; text-align: center;">
+                <em>Note: Every Ascension rank increases the cost of your Stat Rerolls. Secure your SSS Rank early!</em>
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: var(--secondary-glow);">
+            <div class="section-title">
+                <span>📍</span> Strategic Farming & Grind Spots
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                To reach the Level 13,000 ceiling, you cannot farm randomly. You must utilize these specific islands to maximize your time-to-power ratio.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: var(--ice-blue);">
+                    <h4 style="color: var(--ice-blue); margin-bottom: 8px;">Tower Island:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        <strong>Primary Goal:</strong> Infinite Tower progression. <br>
+                        <strong>Key Drops:</strong> Primordial Runes and massive XP chunks. This is the only place to test your Blizzard move's 100B+ damage against scaling enemies.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: var(--neon-purple);">
+                    <h4 style="color: var(--neon-purple); margin-bottom: 8px;">Lawless Island:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        <strong>Primary Goal:</strong> Haki Mastery & Artifacts. <br>
+                        <strong>Key Drops:</strong> Abyssal Crown and High-Tier Haki XP. The NPC density here allows for the fastest Armament and Observation training.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 5px;">Sailor Island (The Hub):</h4>
+                <p style="font-size: 0.85rem; color: var(--text-dim);">
+                    Used primarily for <strong>Trait Rerolls</strong> (Celestial) and <strong>Race Rerolls</strong> (Swordblessed). Keep your gems saved for these two specific gacha mechanics.
+                </p>
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: #ffffff; background: rgba(255, 255, 255, 0.05);">
+            <div class="section-title">
+                <span>📊</span> Level 13,000 Stat Distribution
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                At the Level 13,000 cap, every stat point must be placed with precision. Following the <strong>Swordblessed Race</strong> and <strong>Ice Queen Sword</strong> meta, we use a specialized "Physical-Sword" hybrid spread.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #00ff88;">
+                    <h4 style="color: #00ff88;">Melee: 13,000 (MAX)</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Increases your base physical power and scaling for Haki-infused strikes.</p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #00f2ff;">
+                    <h4 style="color: #00f2ff;">Defense: 13,000 (MAX)</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Essential for reaching the 28M+ Health pool required to tank Tower Bosses.</p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: var(--neon-purple);">
+                    <h4 style="color: var(--neon-purple);">Sword: 13,000 (MAX)</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">The primary damage source. Maximizes the Blizzard move's 100B+ damage output.</p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff4d4d;">
+                    <h4 style="color: #ff4d4d;">Power: 0</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);"><strong>DO NOT INVEST.</strong> Power stats do not benefit the Ice Queen Sword meta. Keep at zero to save points.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 8px; text-align: center; border: 1px solid #fff;">
+                <span style="color: var(--sss-rank); font-weight: bold;">CRITICAL:</span> Ensure your <strong>SSS Stat Reroll</strong> is active before locking these points to gain the hidden efficiency multipliers.
+            </div>
+        </div>
+        <div class="build-card" style="border-left-color: var(--ice-blue); background: linear-gradient(90deg, rgba(0,242,255,0.05) 0%, rgba(2,0,5,1) 100%);">
+            <div class="section-title">
+                <span>⚔️</span> Combat Mastery: The Blizzard Loop
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                To maximize your 100B+ DPS, you must abuse the synergy between your <strong>Celestial Trait</strong> and the <strong>Ice Queen Sword</strong>. This rotation ensures constant pressure and infinite crowd control.
+            </div>
+
+            <div class="detail-grid">
+                <div class="stat-box">
+                    <h4 style="color: var(--ice-blue);">1. Ice Shard Initiation</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        Start by chipping away at the boss's shield. This move triggers your <strong>Frostbane Clan</strong> damage scaling early.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border: 1px solid var(--ice-blue);">
+                    <h4 style="color: #fff;">2. THE BLIZZARD (V-Key)</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        Your primary nuke. Thanks to the <strong>-30% CDR</strong> from Celestial, the downtime is minimal. This move hits multiple times, proccing lifesteal from the <strong>Swordblessed Race</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 0, 0, 0.6); border-radius: 8px; border-left: 3px solid var(--celestial-glow);">
+                <h4 style="color: var(--celestial-glow); font-size: 0.9rem; margin-bottom: 5px;">THE CDR ADVANTAGE:</h4>
+                <p style="font-size: 0.85rem; line-height: 1.4; color: #ccc;">
+                    Normal players wait 10+ seconds for a reset. With this meta build, your Blizzard reset is nearly instant, allowing you to stack the <strong>1.25x Damage Cap</strong> from Frostbane within the first 5 seconds of combat.
                 </p>
             </div>
 
-            <div class="card">
-                <h2>🛡️ Clan: Frostbane</h2>
-                <div class="stat-row">
-                    <span class="stat-label">Ice Buff:</span>
-                    <span class="stat-value" style="color: var(--ice-blue);">+25% Ice Damage</span>
+            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--ice-blue); text-align: center; text-transform: uppercase; font-weight: bold;">
+                Rotation: Initiate -> Scale -> Blizzard Spam -> Repeat
+            </div>
+        </div>
+    <div class="build-card" style="border-left-color: #00d4ff; background: rgba(0, 212, 255, 0.05);">
+            <div class="section-title">
+                <span style="color: #00d4ff;">❄️</span> Boss Guide: Defeating the Ice Queen
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                The <strong>Ice Queen Boss</strong> is the gatekeeper of this meta. She is located at the peak of the <strong>Frozen North Island</strong>. Defeating her is the only way to obtain the Sword and the Frost Empress Title.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #00d4ff;">
+                    <h4 style="color: #00d4ff; margin-bottom: 8px;">How to Spawn:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        She spawns every <strong>2 hours</strong> server-time, or you can force-spawn her using a <strong>Glacial Key</strong> (purchasable at the Frozen Shop for 50M Beli).
+                    </p>
                 </div>
-                <div class="stat-row">
-                    <span class="stat-label">Defense:</span>
-                    <span class="stat-value">+10% Damage Reduction</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Rarity:</span>
-                    <span class="stat-value">Legendary</span>
+
+                <div class="stat-box" style="border-left-color: #00d4ff;">
+                    <h4 style="color: #00d4ff; margin-bottom: 8px;">Her Deadly Moves:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        <strong>Absolute Zero:</strong> A stun move that freezes you for 3 seconds. Use your <strong>Observation Haki</strong> to auto-dodge this, or your run will end.
+                    </p>
                 </div>
             </div>
 
-        </div>
-        <div class="card" style="margin-top: 30px; background: linear-gradient(145deg, #12002b, #25004d);">
-            <h2>🔥 Max Haki Masteries</h2>
-            
-            <div class="stat-row">
-                <span class="stat-label">Armament Haki (Level 100):</span>
-                <span class="stat-value" style="color: #ff4d4d;">+75.5% Total Damage</span>
-            </div>
-            
-            <div class="stat-row">
-                <span class="stat-label">Conqueror's Haki (Level 35):</span>
-                <span class="stat-value" style="color: #ff4d4d;">+34% Total Damage</span>
-            </div>
-            
-            <div class="stat-row">
-                <span class="stat-label">Observation Haki (Level 50):</span>
-                <span class="stat-value" style="color: #ff4d4d;">Max Dodge + 15% Def</span>
-            </div>
-
-            <p style="font-size: 0.85rem; color: #b3b3b3; margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;">
-                <strong>Pro Tip:</strong> Haki training ke liye Lawless Island best hai, wahan tezi se mastery level badhti hai.
-            </p>
-        </div>
-        <div class="card" style="margin-top: 30px;">
-            <h2>🚀 Ascension Path (A1 - A10)</h2>
-            <p style="font-size: 0.9rem; margin-bottom: 15px; color: #b3b3b3;">
-                Level 13,000 tak pahunchne ke liye ye milestones complete karna mandatory hai:
-            </p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tier</th>
-                        <th>Requirements</th>
-                        <th>Major Rewards</th>
+            <div style="margin-top: 25px;">
+                <h4 style="color: #fff; font-size: 0.9rem; text-align: center; margin-bottom: 10px;">Loot Table & Drop Chances</h4>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: var(--text-dim);">
+                    <tr style="border-bottom: 1px solid rgba(0, 212, 255, 0.3);">
+                        <th style="text-align: left; padding: 8px; color: var(--ice-blue);">Item Name</th>
+                        <th style="text-align: right; padding: 8px; color: var(--ice-blue);">Drop Rate</th>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
-                        <td><span class="tag">A1</span></td>
-                        <td>LVL 2500 + 10M Damage</td>
-                        <td>+10% Money/Gems, +2% CDR</td>
+                        <td style="padding: 8px;">Ice Queen Sword</td>
+                        <td style="text-align: right; padding: 8px; color: #fff;">1.5%</td>
                     </tr>
                     <tr>
-                        <td><span class="tag">A5</span></td>
-                        <td>LVL 8000 + 5B Damage</td>
-                        <td>Hard Mode Dungeon Access</td>
+                        <td style="padding: 8px;">Ice Queen Outfit</td>
+                        <td style="text-align: right; padding: 8px; color: #fff;">5.0%</td>
                     </tr>
                     <tr>
-                        <td><span class="tag">A10</span></td>
-                        <td><span class="highlight-text">LVL 13000 + 7500B Damage</span></td>
-                        <td>Max Luck & Ultimate CDR Boost</td>
+                        <td style="padding: 8px;">Frost Empress Title</td>
+                        <td style="text-align: right; padding: 8px; color: #fff;">0.5% (or 155 Pity)</td>
                     </tr>
-                </tbody>
-            </table>
-            
-            <p style="font-size: 0.8rem; color: #ffbc00; margin-top: 15px;">
-                💡 <strong>Note:</strong> A10 par pahunchte hi tumhara cooldown (CDR) itna kam ho jayega ki tum Blizzard move spam kar paoge.
-            </p>
-        </div>
-        <div class="card" style="margin-top: 30px; border-right: 5px solid var(--neon-purple);">
-            <h2>✨ Blessing System (B10 Max)</h2>
-            <p style="font-size: 0.9rem; color: #b3b3b3;">
-                Go to <strong>Shibuya Station NPC</strong> to upgrade your Blessing level.
-            </p>
-
-            <div class="grid-layout" style="margin-top: 15px;">
-                <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; text-align: center;">
-                    <div style="color: var(--neon-purple); font-size: 1.2rem; font-weight: bold;">+25%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase;">Total Damage</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; text-align: center;">
-                    <div style="color: var(--ice-blue); font-size: 1.2rem; font-weight: bold;">+5%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase;">Crit Chance</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; text-align: center;">
-                    <div style="color: #ff00ff; font-size: 1.2rem; font-weight: bold;">+8%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase;">Crit Damage</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 20px; padding: 10px; background: rgba(188, 19, 254, 0.05); border-radius: 5px;">
-                <span class="highlight-text">Material Needed:</span> 
-                <span style="font-size: 0.9rem;">Adamantite (0.225% Drop Rate)</span>
-                <br>
-                <span class="highlight-text">Best Mob:</span> 
-                <span style="font-size: 0.9rem;">Panda Sorcerer</span>
+                </table>
             </div>
         </div>
-        <h2 style="margin-top: 40px; text-align: center; color: var(--ice-blue);">📍 Top Farming Locations</h2>
-        <div class="grid-layout">
-            
-            <div class="card">
-                <h2>🏝️ Sailor Island</h2>
-                <p style="font-size: 0.9rem; color: #b3b3b3;">
-                    Best for rerolling <strong>Traits, Races, and Clans</strong>. 
-                </p>
-                <div class="stat-row">
-                    <span class="stat-label">Currency:</span>
-                    <span class="stat-value">Gems (700k+ Recommended)</span>
-                </div>
+    <div class="build-card" style="border-left-color: #ff00ff; background: rgba(255, 0, 255, 0.05);">
+            <div class="section-title">
+                <span style="color: #ff00ff;">💎</span> Efficient Gem Farming
             </div>
 
-            <div class="card">
-                <h2>🏴‍☠️ Lawless Island</h2>
-                <p style="font-size: 0.9rem; color: #b3b3b3;">
-                    Highest chance for rare <strong>Artifacts</strong> and Haki training.
-                </p>
-                <div class="stat-row">
-                    <span class="stat-label">Key Drop:</span>
-                    <span class="stat-value highlight-text">Abyssal Crown</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>🗼 Tower Island</h2>
-                <p style="font-size: 0.9rem; color: #b3b3b3;">
-                    Push <strong>Infinite Tower</strong> levels for endgame runes.
-                </p>
-                <div class="stat-row">
-                    <span class="stat-label">Drop:</span>
-                    <span class="stat-value">Primordial Runes</span>
-                </div>
-            </div>
-
-        </div>
-        <footer style="margin-top: 60px; text-align: center; padding: 40px; border-top: 1px solid #222; color: #666;">
-            <p style="font-size: 0.9rem;">
-                Sailor Piece Ultimate Build Guide &copy; 2026<br>
-                <span style="color: var(--neon-purple);">Updated: April 13, 2026</span>
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                Since obtaining the <strong>Celestial Trait</strong> and <strong>Swordblessed Race</strong> requires thousands of Gems, you need a high-speed farming method. Here are the two meta-approved ways to stock up.
             </p>
-            <div style="margin-top: 10px; font-size: 0.8rem;">
-                Crafted for the Community - Keep Grinding!
-            </div>
-        </footer>
 
-    </div> </body>
-</html>
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ff00ff;">
+                    <h4 style="color: #ff00ff; margin-bottom: 8px;">Method 1: AFK Cave</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        Located on <strong>Starter Island</strong>. While the gems per minute are lower, using an auto-clicker with your <strong>Ice Queen Sword</strong>'s area-of-effect moves ensures a steady flow of gems while you sleep.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff00ff;">
+                    <h4 style="color: #ff00ff; margin-bottom: 8px;">Method 2: Boss Rush</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        The fastest active method. Defeating the <strong>Ice Queen</strong> or <strong>Panda Sorcerer</strong> repeatedly rewards huge Gem chunks. With your 100B+ damage, you can clear these bosses in seconds.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 15px; background: rgba(255, 0, 255, 0.1); border: 1px solid rgba(255, 0, 255, 0.3); border-radius: 8px;">
+                <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase;">Spending Priority:</h4>
+                <ol style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                    <li><strong>Race Reroll:</strong> Secure <em>Swordblessed</em> first for the multiplier.</li>
+                    <li><strong>Trait Reroll:</strong> Aim for <em>Celestial</em> (0.1% chance) to unlock the cooldown reduction.</li>
+                    <li><strong>Stat Reroll:</strong> Final polish to hit <em>SSS Rank</em>.</li>
+                </ol>
+            </div>
+        </div>
+    <div class="build-card" style="border-left-color: #00ff88; background: rgba(0, 255, 136, 0.05);">
+            <div class="section-title">
+                <span style="color: #00ff88;">🐼</span> Boss Guide: The Panda Sorcerer
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                The <strong>Panda Sorcerer</strong> is the most contested boss for end-game players. He is the only source of <strong>Adamantite</strong>, the material required to reach the legendary <strong>B10 Blessing</strong> status at Shibuya Station.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #00ff88;">
+                    <h4 style="color: #00ff88; margin-bottom: 8px;">Location:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        Found hidden within the <strong>Bamboo Forest</strong> on the outskirts of Shibuya. He has a fast respawn timer but incredibly high HP.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #00ff88;">
+                    <h4 style="color: #00ff88; margin-bottom: 8px;">Survival Tip:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        His "Cursed Pulse" attack can bypass shields. Maintain your distance and use the <strong>Blizzard</strong> move's maximum range to stay safe.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 0, 0, 0.5); border-radius: 8px; border: 1px solid #00ff88;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h4 style="color: #fff; margin: 0;">Rare Drop: Adamantite</h4>
+                        <p style="font-size: 0.75rem; color: #00ff88; margin: 5px 0 0 0;">Used for: B1 to B10 Upgrades</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span style="font-size: 1.2rem; font-weight: bold; color: #ff4d4d;">0.225%</span>
+                        <div style="font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase;">Drop Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="build-card" style="border-left-color: #ffcc00; background: rgba(255, 204, 0, 0.05);">
+            <div class="section-title">
+                <span style="color: #ffcc00;">💍</span> Elite Accessories & Buffs
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                To reach the absolute peak of the <strong>Ice Meta</strong>, your outfit and sword aren't enough. You need to equip specific accessories that provide hidden multipliers to your Sword and Melee stats.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ffcc00;">
+                    <h4 style="color: #ffcc00;">Abyssal Crown</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">
+                        Dropped by high-level mobs on Lawless Island. Adds <strong>+15% Sword Damage</strong> and stacks with your Race multiplier.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ffcc00;">
+                    <h4 style="color: #ffcc00;">Frozen Amulet</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">
+                        Found in the Frozen North secret chests. Increases <strong>Ice-elemental damage</strong> by a flat 12% across all moves.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 12px; background: rgba(255, 255, 255, 0.05); border-radius: 8px; font-size: 0.85rem; color: #ccc;">
+                <strong>Inventory Tip:</strong> Keep your inventory clean. Only keep items that provide <strong>% Multipliers</strong>. Flat stat items become useless once you hit the 13,000 Level Cap.
+            </div>
+        </div>
+    <div class="build-card" style="border-left-color: #ff3300; background: rgba(255, 51, 0, 0.05);">
+            <div class="section-title">
+                <span style="color: #ff3300;">🏰</span> End-Game: Infinite Tower Progression
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                The <strong>Infinite Tower</strong> on Tower Island is where your 100B+ Blizzard damage is truly tested. As you climb higher, enemies gain massive HP pools that only a perfect <strong>Ice Meta Build</strong> can shred.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #ff3300;">
+                    <h4 style="color: #fff;">Floors 1 - 25:</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">
+                        Warm-up stages. Your <strong>Celestial Trait</strong> cooldown reduction allows you to clear these floors in under 5 minutes.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #ff3300;">
+                    <h4 style="color: #fff;">Floors 26 - 50+:</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">
+                        This is where <strong>Primordial Runes</strong> drop. Enemies here have trillions of HP. Without your <strong>B10 Shibuya Blessing</strong>, you will struggle to move past Floor 40.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 0, 0, 0.7); border-radius: 8px; border: 1px solid #ff3300;">
+                <h4 style="color: #ff3300; font-size: 0.9rem; margin-bottom: 5px;">TOWER REWARDS:</h4>
+                <ul style="font-size: 0.85rem; color: #ccc; padding-left: 20px;">
+                    <li><strong>Rune Fragments:</strong> Used to level up your Primordial Rune to Lvl 60.</li>
+                    <li><strong>Ascension Essence:</strong> Needed for the jump from A9 to A10.</li>
+                    <li><strong>Legendary Gems:</strong> Higher drop rates than the AFK Cave.</li>
+                </ul>
+            </div>
+        </div>
+    <div class="build-card" style="border-left-color: #00ffcc; background: rgba(0, 255, 204, 0.05);">
+            <div class="section-title">
+                <span style="color: #00ffcc;">🤝</span> Trading & Item Economy
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px;">
+                In the current meta, high-tier items like the <strong>Ice Queen Sword</strong> and <strong>Adamantite</strong> are highly valuable. If you have duplicates, you can trade them to accelerate your progress toward the <strong>Celestial Trait</strong>.
+            </p>
+
+            <div class="detail-grid">
+                <div class="stat-box" style="border-left-color: #00ffcc;">
+                    <h4 style="color: #00ffcc; margin-bottom: 8px;">Market Value:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        The <strong>Ice Queen Sword</strong> is currently a "High-Demand" item. Never trade it for flat stat accessories; always look for <strong>Gems</strong> or <strong>Reroll Tokens</strong>.
+                    </p>
+                </div>
+
+                <div class="stat-box" style="border-left-color: #00ffcc;">
+                    <h4 style="color: #00ffcc; margin-bottom: 8px;">Trading Safety:</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">
+                        Only trade in the <strong>Safe Zone</strong> at Sailor Island. Check the "Value List" in the community discord before confirming any Adamantite trades.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 0, 0, 0.4); border-radius: 8px; border: 1px dashed #00ffcc;">
+                <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 5px; text-align: center;">GIFTING SYSTEM:</h4>
+                <p style="font-size: 0.8rem; color: #ccc; text-align: center;">
+                    If you want to help a friend start their <strong>Ice Meta</strong> journey, you can gift <em>Glacial Keys</em> to help them spawn the Ice Queen Boss faster.
+                </p>
+            </div>
+        </div>
