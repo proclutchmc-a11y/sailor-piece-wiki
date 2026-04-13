@@ -83,3 +83,68 @@
 </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Queen Wiki | Sailor Piece</title>
+    <style>
+        :root { --gold: #ffcc00; --cyan: #00d4ff; --bg: #050a0f; --dark-blue: #0a1622; }
+        body { background: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 850px; margin: auto; }
+        .main-header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--gold); padding-bottom: 20px; }
+        .main-header h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; margin: 0; }
+        
+        .premium-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 204, 0, 0.2); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
+        h2 { color: var(--gold); font-size: 1.3rem; text-transform: uppercase; margin-bottom: 15px; border-left: 4px solid var(--cyan); padding-left: 10px; }
+        
+        /* Outfit Section Styles */
+        .outfit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+        .stat-box { background: var(--dark-blue); border: 1px solid #1e3a52; padding: 15px; border-radius: 8px; }
+        .stat-box h3 { font-size: 0.9rem; color: var(--cyan); margin: 0 0 10px 0; text-transform: uppercase; }
+        .stat-list { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; }
+        .stat-list li { margin-bottom: 5px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3px; }
+        .stat-val { color: var(--gold); font-weight: bold; }
+        
+        .drop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+        .drop-box { background: rgba(0,0,0,0.5); border: 1px solid #1e3a52; border-radius: 8px; padding: 12px; text-align: center; }
+        .drop-box b { display: block; font-size: 1.2rem; color: var(--gold); margin-top: 5px; }
+        .highlight { color: var(--cyan); font-weight: bold; }
+        .back-btn { text-decoration: none; color: var(--gold); border: 1px solid var(--gold); padding: 6px 15px; border-radius: 4px; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">← MASTER HUB</a>
+    <div class="main-header"><h1>Ice Queen Wiki</h1></div>
+    <div class="premium-card">
+        <h2>03. Ice Queen Outfit</h2>
+        <div style="background: rgba(255, 204, 0, 0.05); padding: 12px; border-radius: 8px; margin-bottom: 20px; border: 1px solid rgba(255,204,0,0.2);">
+            <span class="label">Boss:</span> <b class="highlight">Ice Queen</b> (1.65B Health) <br>
+            <span class="label">Location:</span> <b>Boss Island</b> <br>
+            <span class="label">Drop Chance:</span> <b style="color: #ff4444;">1.17%</b>
+        </div>
+
+        <div class="outfit-grid">
+            <div class="stat-box">
+                <h3>Base Stats</h3>
+                <ul class="stat-list">
+                    <li>Defense <span class="stat-val">+110%</span></li>
+                    <li>DMG Reduction <span class="stat-val">+15%</span></li>
+                    <li>DMG Stats <span class="stat-val">+87%</span></li>
+                </ul>
+            </div>
+            <div class="stat-box" style="border-color: var(--cyan);">
+                <h3>Maxed Out (E10)</h3>
+                <ul class="stat-list">
+                    <li>Defense <span class="stat-val">+160%</span></li>
+                    <li>DMG Reduction <span class="stat-val">+35%</span></li>
+                    <li>DMG Stats <span class="stat-val">+127%</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div> </body>
+</html>
