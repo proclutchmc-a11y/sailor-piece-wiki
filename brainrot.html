@@ -155,11 +155,19 @@
 
     <script>
         // Copy Code Function
-        function copyCode(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Code Copied: " + text);
-            });
-        }
+       function copyCode(text) {
+    navigator.clipboard.writeText(text);
+    // Button ka text badalne ke liye
+    const btn = event.target;
+    const originalText = btn.innerText;
+    btn.innerText = "COPIED!";
+    btn.style.background = "#ff00ff"; // Pink glow color
+    
+    setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.background = ""; // Wapas pehle jaisa
+    }, 2000);
+}
 
         // Water Ripple Effect
         document.addEventListener('mousedown', function(e) {
